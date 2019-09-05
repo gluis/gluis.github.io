@@ -11,6 +11,7 @@ body {
 /******** GALLERY-NEW  *********/
 .gallery-page-new h1 {
   font-size: 3rem;
+  font-weight: 300;
   margin: 1rem 0;
   padding-left: 1rem;
   padding-right: 1rem;
