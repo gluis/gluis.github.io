@@ -2,12 +2,13 @@
   $white: #FFFFFF;
   $black: #000000;
   $body-background: $white;
+  $bodytext: #d77100;
 
   body {
     font-family: 'Josefin Slab',
       serif;
     font-size: 20px;
-    color: #d77100;
+    color: $bodytext;
     background-color: #000000;
   }
 
@@ -20,6 +21,13 @@
 
   // #container
 
+
+  a,
+  a:visited {
+    color: $bodytext;
+  }
+
+  // a, a:visited
   /******** GALLERY-NEW  *********/
 
   // Pages that have square thumbnails for users to click on to open full screen version 
