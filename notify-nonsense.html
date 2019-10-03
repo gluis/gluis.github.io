@@ -16,11 +16,42 @@ title: Notify Nonsense demo
     <span class='nn-confirm' data-notify-text="Are you Ok with this?">Question</span>
   </p>
 </div>
-
+<p id="response"></p>
 
 <script src="{{ '/assets/js/notify-nonsense.js' | relative_url }}"></script>
 <script>
   if (notifyNonsense) {
     notifyNonsense.init()
+
+    let confirmResponse = document.getElementById("nn-confirm-input") // defaults to false
+
+    const writeResponse = function (response) {
+      let noticeText = document.querySelector('#response')
+      noticeText.innerText = response === 'true' ? "THEY SAID THEY'RE OK WITH IT!" : ""
+    }
+
+    // Create callback to observe change in DOM element's 'value' attribute
+    const confirmatonCallback = function (mutations) {
+      mutations.forEach(mutation => {
+        if (mutation.type === 'attributes') {
+          writeResponse(mutation.target.value)
+        }
+      })
+    }
+
+    // Create config for MutationObserver and start observing
+    // Here, we only care about the attributes mutating
+    const observeConfirmation = function () {
+      var config = {
+        childList: false,
+        attributes: true
+      }
+      let observer = new MutationObserver(confirmatonCallback)
+      observer.observe(confirmResponse, config)
+    }
+
+    // Call your function
+    observeConfirmation()
+
   }
 </script>
