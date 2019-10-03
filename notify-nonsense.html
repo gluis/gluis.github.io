@@ -1,0 +1,26 @@
+---
+layout: nn
+title: Notify Nonsense demo
+---
+
+
+<div>
+  <h1>NotifyNonsense</h1>
+</div>
+<div id="nn-container">
+  <p>
+    <span class='nn-alert'
+      data-notify-text="You can use HTML in these alerts of confirm windows.<br><a target='_blank' href='/'>This</a> is a link!">Statement</span>
+  </p>
+  <p>
+    <span class='nn-confirm' data-notify-text="Are you Ok with this?">Question</span>
+  </p>
+</div>
+
+
+<script src="{{ '/assets/js/notify-nonsense.js' | relative_url }}"></script>
+<script>
+  if (notifyNonsense) {
+    notifyNonsense.init()
+  }
+</script>

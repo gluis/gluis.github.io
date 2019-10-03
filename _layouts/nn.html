@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -8,16 +9,15 @@
   <link rel="icon" href="/favicon.ico" type="image/x-icon">
   <title>{{ page.title }}</title>
 
-  <link href="https://fonts.googleapis.com/css?family=Josefin+Slab|Monoton&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
+  <link rel="stylesheet" href="{{ '/assets/css/nn.css' | relative_url }}">
 </head>
 
 <body>
-  <div id='container-content'>
-    {{ content }}
-  </div>
+  <a href="/">Back to the libraries</a>
+  {{ content }}
   <footer>
-    Made with love by <a href="https://nataloo.com" target="_blank">Nataloo</a>
+    <span id="credit">Made with love by <a href="https://nataloo.com">Nataloo</a> | <a
+        href="https://github.com/gluis/notify-nonsense">Code</a></span>
   </footer>
 </body>
 

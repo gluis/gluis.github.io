@@ -1,90 +1,13 @@
 ---
 layout: default
-title: Modal Madness demo
+title: Libraries
 ---
-<div id="container">
-  <section class="gallery-page-new">
-    <h1>{{ page.title }}</h1>
-
-    <div class="blurb">
-      <p>
-        Images of varying sizes are accommodated. (Click on them to see.)
-      </p>
-    </div>
-
-    <div class="thumbnail-container">
-      <!--  PASTE NEW PLACEHOLDERS BELOW HERE -->
-      <div class="gallery-thumb">
-        <a class="modal-link"
-          href="{{ '/assets/images/4k-wallpaper-citrus-fruit-close-up-2084239.jpg' | relative_url }}"
-          data-title="Oranges! Oranges! <a href='https://www.pexels.com/photo/photo-of-pile-of-oranges-2084239/' target='_blank'>Source</a>">
-          <img src="{{ '/assets/images/4k-wallpaper-citrus-fruit-close-up-2084239.jpg' | relative_url }}"
-            alt="Oranges" />
-        </a>
-      </div>
-
-      <div class="gallery-thumb">
-        <a class="modal-link" href="{{ '/assets/images/Baby-Hitler-random-23128715-430-355.jpg' | relative_url }}"
-          data-title="Baby Hitler <a href='http://www.fanpop.com/clubs/random/images/23128715/title/baby-hitler-photo' target='_blank'>Source</a>">
-          <img src="{{ '/assets/images/Baby-Hitler-random-23128715-430-355.jpg' | relative_url }}"
-            alt="Baby Hitler photo." />
-        </a>
-      </div>
-
-      <div class="gallery-thumb">
-        <a class="modal-link" href="{{ '/assets/images/beach-body-of-water-feet-1770803.jpg' | relative_url }}"
-          data-title="Upside down. <a target='_blank' href='https://www.pexels.com/photo/person-diving-on-body-of-water-1770803/'>Source</a>">
-          <img src="{{ '/assets/images/beach-body-of-water-feet-1770803.jpg' | relative_url }}" alt="Man in water" />
-        </a>
-      </div>
-
-      <div class="gallery-thumb">
-        <a class="modal-link" href="{{ '/assets/images/cap-chin-close-up-2499811.jpg' | relative_url }}"
-          data-title="Hmm... <a href='https://www.pexels.com/photo/portrait-photo-of-elderly-man-leaning-chin-on-his-hand-palm-2499811/' target='_blank'>Source</a>">
-          <img src="{{ '/assets/images/cap-chin-close-up-2499811.jpg' | relative_url }}" alt="Man with hat" />
-        </a>
-      </div>
-
-      <div class="gallery-thumb">
-        <a class="modal-link" href="{{ '/assets/images/ancient-architecture-art-797719.jpg' | relative_url }}"
-          data-title="I feel eiffel. <a href='https://www.pexels.com/photo/eiffel-tower-paris-797719/' target='_blank'>Source</a>">
-          <img src="{{ '/assets/images/ancient-architecture-art-797719.jpg' | relative_url }}" alt="" />
-        </a>
-      </div>
-
-      <div class="gallery-thumb">
-        <a class="modal-link" href="{{ '/assets/images/aircraft-airplane-boat-1575833.jpg' | relative_url }}"
-          data-title="Dum dum. <a href='https://www.pexels.com/photo/top-view-photo-of-boat-near-airplane-1575833/' target='_blank'>Source</a>">
-          <img src="{{ '/assets/images/aircraft-airplane-boat-1575833.jpg' | relative_url }}" alt="Dum dum..." />
-        </a>
-      </div>
-    </div>
-
-  </section>
-  <span id="credit">Made with love by <a href="https://nataloo.com">Nataloo</a> | <a
-      href="https://github.com/gluis/modal-madness">Code</a></span>
+<div class='container'>
+  <h1>The libraries</h1>
+  <p>
+    <a href="/modal-madness.html">ModalMadness</a>
+  </p>
+  <p>
+    <a href="/notify-nonsense.html">NotifyNonsense</a>
+  </p>
 </div>
-
-<section id="modal-window">
-  <span id="modal-close">X</span>
-  <span id="modal-prev">&lt;</span>
-  <span id="modal-next">&gt;</span>
-  <div id="modal-content">
-    <div class="modal-image-view">
-      <img id="modal-image" src="" alt="">
-    </div>
-    <div class="modal-text-view">
-      <p id="modal-text"></p>
-    </div>
-  </div>
-</section>
-
-
-
-
-<script src="{{ '/assets/js/modal-madness.js' | relative_url }}"></script>
-<script>
-  if (modalMadness) {
-    modalMadness.init()
-  }
-</script>
